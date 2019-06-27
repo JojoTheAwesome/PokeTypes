@@ -1,0 +1,56 @@
+﻿@model PokeTypes.Models.Pokemon
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pokemon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")<br />
+</p>
+
+<h3>Type effectiveness:</h3> <br />
+<ul>
+@{
+    double[] resistances = Model.typeEffectiveness(Model.Type1.ToLower(),Model.Type2.ToLower());
+
+        }
+    @for (int i = 0; i < resistances.Length; i++) {
+    <li>
+        @resistances[i]
+
+    </li>
+}
+</ul>
