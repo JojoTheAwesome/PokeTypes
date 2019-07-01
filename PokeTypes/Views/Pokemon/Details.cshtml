@@ -12,11 +12,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.PokemonName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.PokemonName)
         </dd>
 
         <dt>
@@ -26,31 +26,47 @@
         <dd>
             @Html.DisplayFor(model => model.Type1)
         </dd>
+        @if (Model.Type2 != "") {
+            <dt>
+                @Html.DisplayNameFor(model => model.Type2)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Type2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Type2)
-        </dd>
-
+            <dd>
+                @Html.DisplayFor(model => model.Type2)
+            </dd>
+        }
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Back to List", "Index")<br />
+    @Html.ActionLink("Back to List", "Index")
 </p>
 
-<h3>Type effectiveness:</h3> <br />
+<h3>Type effectiveness:</h3><br />
+
+@{ 
+    double[] resistances = Model.typeEffectiveness(Model.Type1.ToLower(), Model.Type2.ToLower());
+    string[] resStr = Model.typeEffectivenessStr(Model.Type1.ToLower(), Model.Type2.ToLower());
+}
+
+<h4>Resistant to:</h4>
 <ul>
-@{
-    double[] resistances = Model.typeEffectiveness(Model.Type1.ToLower(),Model.Type2.ToLower());
-
-        }
     @for (int i = 0; i < resistances.Length; i++) {
-    <li>
-        @resistances[i]
+        if (resistances[i] > 1) {
+            <li>
+                @resStr[i]
+            </li>
+        }
+    }
+</ul>
 
-    </li>
+<h4>Weak to:</h4>
+<ul>
+@for(int i=0; i<resistances.Length; i++) {
+    if(resistances[i] < 1) {
+        <li>
+            @resStr[i]
+        </li>
+    }
 }
 </ul>
+

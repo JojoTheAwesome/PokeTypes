@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.28917.181
+VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeTypes", "PokeTypes\PokeTypes.csproj", "{DCDAD544-AD76-4A04-BFFB-6F859C7E9A78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeTypes", "PokeTypes\PokeTypes.csproj", "{4A047013-DEB9-4019-92CE-45B5012D0120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DCDAD544-AD76-4A04-BFFB-6F859C7E9A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCDAD544-AD76-4A04-BFFB-6F859C7E9A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCDAD544-AD76-4A04-BFFB-6F859C7E9A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCDAD544-AD76-4A04-BFFB-6F859C7E9A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A047013-DEB9-4019-92CE-45B5012D0120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A047013-DEB9-4019-92CE-45B5012D0120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A047013-DEB9-4019-92CE-45B5012D0120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A047013-DEB9-4019-92CE-45B5012D0120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {13DBE4AA-5A23-456C-B990-30739537605C}
+		SolutionGuid = {DBF01E4A-8559-41C4-A7DB-8223746A4DC9}
 	EndGlobalSection
 EndGlobal

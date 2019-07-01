@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DCDAD544-AD76-4A04-BFFB-6F859C7E9A78}</ProjectGuid>
+    <ProjectGuid>{4A047013-DEB9-4019-92CE-45B5012D0120}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44307</IISExpressSSLPort>
+    <IISExpressSSLPort>44313</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -131,7 +131,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoveController.cs" />
     <Compile Include="Controllers\PokemonController.cs" />
-    <Compile Include="Controllers\ResistanceLogic.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,13 +175,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Pokemon\Index.cshtml" />
-    <Content Include="Views\Pokemon\Details.cshtml" />
     <Content Include="Views\Move\Index.cshtml" />
-    <Content Include="Views\Move\Details.cshtml" />
+    <Content Include="Views\Pokemon\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Poke\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -213,9 +210,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50956</DevelopmentServerPort>
+          <DevelopmentServerPort>50634</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44307/</IISUrl>
+          <IISUrl>https://localhost:44313/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

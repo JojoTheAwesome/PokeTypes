@@ -9,18 +9,22 @@ using System.Web.Mvc;
 
 namespace PokeTypes.Controllers
 {
-    public class PokemonController : Controller
-    {
+    public class PokemonController : Controller {
         private PokemonContext db = new PokemonContext();
         // GET: Pokemon
-        public ActionResult Index()
+       public ActionResult Index(string searching)
         {
-            return View(db.Pokemons.ToList());
+            var pokemons = from s in db.Pokemons select s;
+            if (!String.IsNullOrEmpty(searching)) {
+                pokemons = pokemons.Where(s => s.PokemonName.ToLower().Contains(searching.ToLower()));
+            }
+            return View(pokemons.ToList());
         }
+
 
         // GET: Pokemon/Details/5
         public ActionResult Details(int? id) {
-            if(id == null) {
+            if (id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Pokemon pokemon = db.Pokemons.Find(id);

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 
 namespace PokeTypes.Context {
-    public class PokemonContext : DbContext{
+    public class PokemonContext : DbContext {
         public DbSet<Pokemon> Pokemons { get; set; }
     }
 }

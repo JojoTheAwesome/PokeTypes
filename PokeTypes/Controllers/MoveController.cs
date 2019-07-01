@@ -1,34 +1,25 @@
 ﻿using PokeTypes.Context;
-using PokeTypes.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
 namespace PokeTypes.Controllers
 {
-    public class MoveController : Controller { 
-
+    public class MoveController : Controller
+    {
         private MoveContext db = new MoveContext();
-        // GET: Pokemon
-        public ActionResult Index() {
+        // GET: Move
+        public ActionResult Index()
+        {
             return View(db.Moves.ToList());
         }
 
-
-
         // GET: Move/Details/5
-        public ActionResult Details(int? id) {
-            if (id == null) {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Move move = db.Moves.Find(id);
-            if (move == null) {
-                return HttpNotFound();
-            }
-            return View(move);
+        public ActionResult Details(int id)
+        {
+            return View();
         }
 
         // GET: Move/Create
